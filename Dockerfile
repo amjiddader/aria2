@@ -62,7 +62,7 @@ RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php
 #ARG GIT_UP
 #RUN git clone ${GIT_UP} /list
 
-RUN chmod 777 -R /list
+#RUN chmod 777 -R /list
 # For rclone cache and aria2 DHT files
 VOLUME /app/.cache
 
