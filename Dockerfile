@@ -57,7 +57,7 @@ VOLUME /app/conf/
 # For file downloading
 VOLUME /data
 
-RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
+RUN apt update && apt install -y --no-install-recommends git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd
 
 #ARG GIT_UP
 #RUN git clone ${GIT_UP} /list
