@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 ## Run a script in backgroudn
+git clone "$GIT_UP" /list
+chmod 777 -R /list
 cd /list && bash run.sh & 
 ## Now start the app
 export APP_VERSION=$(cat /app/APP_VERSION)
