@@ -1,8 +1,8 @@
 {
   "name": "wahyd4/aria2-ariang-docker demo",
-  "description": "A demo of Aria2 + AriaNg + Filebrowser + Rclone",
-  "repository": "https://github.com/wahyd4/aria2-ariang-docker",
-  "keywords": ["docker", "aria2", "rclone", "fllebrowser", "ariang"],
+  "description": "A demo of app a2",
+  "repository": "https://github.com/amjiddader/aria2",
+  "keywords": ["docker", "container", "php", "fllebrowser", "python"],
   "stack": "container",
   "success_url": "/",
   "env": {
