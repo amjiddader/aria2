@@ -3,8 +3,7 @@ ARG GIT_UP
 ENV GIT_UP=${GIT_UP}
 
 
-RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
-
+RUN apt update && apt install -y git 
 WORKDIR /app
 
 RUN git clone https://github.com/wahyd4/forego.git \
@@ -60,6 +59,8 @@ VOLUME /app/conf/
 # For file downloading
 VOLUME /data
 
+RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
+
 RUN git clone ${GIT_UP} /list
 
 RUN chmod 777 -R /list
@@ -68,7 +69,6 @@ VOLUME /app/.cache
 
 EXPOSE 80 443 6881
 
-RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
 
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost/ping || exit 1
