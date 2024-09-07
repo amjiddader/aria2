@@ -11,7 +11,9 @@ if [[ "${ARIA2_SSL}" = "true" ]]; then
     --enable-rpc --rpc-listen-all \
     --rpc-certificate=/app/conf/key/aria2.crt \
     --rpc-private-key=/app/conf/key/aria2.key \
-    --rpc-secret="${RPC_SECRET}" --rpc-secure
+    --rpc-secret="${RPC_SECRET}" --rpc-secure \
+    --dir=/list/temp \
+    --on-download-complete=/list/mv.sh
 
 elif [[ "${ARIA2_SSL}" = "false" ]] && [[ "${RPC_SECRET}" != "" ]]; then
   echo "[INFO] Start aria2 with rpc-secret"
