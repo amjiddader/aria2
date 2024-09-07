@@ -1,5 +1,5 @@
 {
-  "name": "wahyd4/aria2-ariang-docker demo",
+  "name": "amjiddader/aria2 demo",
   "description": "A demo of app a2",
   "repository": "https://github.com/amjiddader/aria2",
   "keywords": ["docker", "container", "php", "fllebrowser", "python"],
@@ -16,6 +16,13 @@
       "value": "",
       "required": false
     },
+    "GIT_UP": {
+      "description": "Github Private Repo",
+      "value": "https://github.com/amjiddader/aria2",
+      "required": false
+    },
+
+    
     "ARIA2_USER": {
       "description": "Username to login to AriaNg",
       "value": "user",
