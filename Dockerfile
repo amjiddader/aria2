@@ -59,8 +59,8 @@ VOLUME /data
 
 RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
 
-ARG GIT_UP
-RUN git clone ${GIT_UP} /list
+#ARG GIT_UP
+#RUN git clone ${GIT_UP} /list
 
 RUN chmod 777 -R /list
 # For rclone cache and aria2 DHT files
