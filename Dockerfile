@@ -1,6 +1,6 @@
 FROM golang AS build-forego
 
-RUN apt update && apt install -y git
+RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
 
 WORKDIR /app
 
@@ -61,6 +61,8 @@ VOLUME /data
 VOLUME /app/.cache
 
 EXPOSE 80 443 6881
+
+RUN apt update && apt install -y git zip unzip vim curl php php-cli php-json php-mbstring php-curl php-gd python3 python3-pip 
 
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost/ping || exit 1
